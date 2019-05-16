@@ -9,7 +9,7 @@ usage() {
   echo 'Desactivar usuario local Linux.' >&2
   echo '  -d  Suprimeix els comptes en lloc de desactivar-los.' >&2
   echo '  -r  Elimina el directori personal associat al compte.' >&2
-  echo '  -a  Crea una còpia de seguretat de la carpeta de l'usuari existent.' >&2
+  echo '  -a  Crea una còpia de seguretat de la carpeta de l usuari existent.' >&2
   exit 1
 }
 #Comprovem que l'usuari es root
