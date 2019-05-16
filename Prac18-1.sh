@@ -12,14 +12,14 @@ usage() {
   echo '  -a  Crea un arxiu del directori inicial associat al compte.' >&2
   exit 1
 }
-
+#Comprovem que l'usuari es root
 if [[ $EUID -ne 0 ]]
 then
-echo -e "El usuario NO es root, por lo que no se permite ejecutar el script"
+echo -e "L'usuari NO es root, no es permet executar el script"
 exit 1
 fi
 
-
+#Declarem les opcions
 while getopts dra OPTION
 do
   case ${OPTION} in
@@ -41,6 +41,7 @@ for USERNAME in "${@}"
 do
   echo "Processant usuari: ${USERNAME}"
 
+#Comprovem que el UID del user es almenys 1000
   USERID=$(id -u ${USERNAME})
   if [[ "${USERID}" -lt 1000 ]]
   then
@@ -48,7 +49,7 @@ do
     exit 1
   fi
 
-
+#Opcio d'arxivar l'user
   if [[ "${ARCHIVE}" = 'true' ]]
   then
 
@@ -81,14 +82,14 @@ do
     fi
   fi
 
-#Borrar directori   
+#Opcio borrar directori   
 	if [[ "${REMOVE_OPTION}" = 'true' ]]
   then
 	rm -r /home/${USERNAME}
 	echo "Directori borrat. "
 	fi
 
-#Borrar usuari
+#Opcio borrar usuari
   if [[ "${DELETE_USER}" = 'true' ]]
   then
 
@@ -115,4 +116,3 @@ do
 done
 
 exit 0
-
