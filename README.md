@@ -3,9 +3,12 @@ PRACTICA 18 - PROJECTE 03 Tasca
 
 Es demana en el CHECK:
 
-Codi del projecte en el repositori GitHub, amb ambdós col·laboradors
-Prova del codi dins una VM arrencada amb Vagrant
-Fulls de seguiment Google emplenats per ambdós membres
+- Codi del projecte en el repositori GitHub, amb ambdós col·laboradors.
+
+- Prova del codi dins una VM arrencada amb Vagrant.
+
+- Fulls de seguiment Google emplenats per ambdós membres.
+
 CHECK STEPS (PLEASE, BEFORE ASKING TO THE TEACHER FOR YOUR CHECK, WRITE THIS LIST ON AN EDITOR SHEET AND CHECK OUT ON THAT LIST WHAT STEPS HAVE BEEN SUCCESSFUL ON YOUR PREVIOUS TESTS):
 
 - Executa disable-local-user.sh sense sudo.
